@@ -7,5 +7,10 @@ import { Component } from '@angular/core';   // Need to import Component for it 
     templateUrl: './server.component.html' // Points to the template page (HTML page of the component)
 })
 export class ServerComponent {  // export means that we want to use this class outside of this file
+    serverId: number = 10;              // Do name: type in TypeScript to specify the type of a variable
+    serverStatus: string = 'Offline';
 
+    getServerStatus() {
+        return this.serverStatus;
+    }
 }

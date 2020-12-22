@@ -1,3 +1,5 @@
-<div style="border: 1px solid yellowgreen; padding: 10px">
-    <h1>Server component</h1>
+<div style="border: 2px solid yellowgreen; padding: 10px">
+    <!-- Anything inside of the {{}} must be a string or easily converted to a string -->
+    <!-- The {{}} syntax is called string interpolation, you can use variables and methods inside -->
+    <h1>{{ 'Server' }} with Id {{ serverId }} is {{ getServerStatus() }}</h1>
 </div>
