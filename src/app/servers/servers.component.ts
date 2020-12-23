@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = "No Server was created";
-  serverName = '';
+  serverName = 'test server';
 
   constructor() { 
     setTimeout(() => {
@@ -22,10 +22,12 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Changes the text below the Add Server button when it's clicked
   onCreateServer() {
     this.serverCreationStatus = "Server was created!";
   }
 
+  // When anything is typed into the input element, show the typed text in a p tag.
   onUpdateServerName(event: Event) {
     console.log(event);
     // Since not all events have a value property, we need to specify that this is an Input element

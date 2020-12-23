@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// Needed to perform two-way-binding
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component'; // TypeScript needs to know where to find this new component.  Don't put .ts
 import { ServersComponent } from './servers/servers.component';
@@ -16,7 +19,8 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component'
     SuccessAlertComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

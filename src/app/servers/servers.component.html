@@ -1,10 +1,19 @@
 <label>Server Name</label>
 
 <!-- Some events give you data when they are fired.  This data can be captured by passing $event as an argument -->
+<!-- <code class="mt-1 d-block">1-way-binding</code>
 <input
     type="text"
     class="form-control"
-    (input)="onUpdateServerName($event)">
+    (input)="onUpdateServerName($event)"> -->
+
+<!-- Import FormsModule from @angular/forms to use two-way-binding.  The initial text in the serverName variable -->
+<!-- is populated in the form.  This doesn't happen with the one-way-binding in the above form. -->
+<code class="mt-1 d-block">2-way-binding</code>
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName">
 
 <p class="my-3">{{ serverName }}&nbsp;</p>
 
