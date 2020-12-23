@@ -1,44 +1,30 @@
-<label>Server Name</label>
+<div class="servers-container">
+    <label>Server Name</label>
 
-<!-- Some events give you data when they are fired.  This data can be captured by passing $event as an argument -->
-<!-- <code class="mt-1 d-block">1-way-binding</code>
-<input
-    type="text"
-    class="form-control"
-    (input)="onUpdateServerName($event)"> -->
+    <!-- Some events give you data when they are fired.  This data can be captured by passing $event as an argument -->
+    <!-- <code class="mt-1 d-block">1-way-binding</code>
+    <input
+        type="text"
+        class="form-control"
+        (input)="onUpdateServerName($event)"> -->
 
-<!-- Import FormsModule from @angular/forms to use two-way-binding.  The initial text in the serverName variable -->
-<!-- is populated in the form.  This doesn't happen with the one-way-binding in the above form. -->
-<code class="mt-1 d-block">2-way-binding</code>
-<input
-    type="text"
-    class="form-control"
-    [(ngModel)]="serverName">
+    <!-- Import FormsModule from @angular/forms to use two-way-binding.  The initial text in the serverName variable -->
+    <!-- is populated in the form.  This doesn't happen with the one-way-binding in the above form. -->
+    <code class="mt-1 d-block">2-way-binding</code>
+    <input type="text" class="form-control" [(ngModel)]="serverName">
 
-<!-- <p class="my-3">{{ serverName }}&nbsp;</p> -->
+    <!-- <p class="my-3">{{ serverName }}&nbsp;</p> -->
 
-<!-- By property binding by using [ ], we are setting the disabled property natively... -->
-<!-- ...which is something that the regular disabled HTML attribute doesn't do. -->
-<!-- Since the disabled property uses a bool, we set true or false based on the variable we declared in the TS. -->
-<!-- Parenthesis ( ) define an event binding.  If we want to catch and do something with an event, do this -->
-<button [disabled]="!allowNewServer" class="btn btn-primary my-1" (click)="onCreateServer()">
-    Add Server
-</button>
+    <!-- By property binding by using [ ], we are setting the disabled property natively... -->
+    <!-- ...which is something that the regular disabled HTML attribute doesn't do. -->
+    <!-- Since the disabled property uses a bool, we set true or false based on the variable we declared in the TS. -->
+    <!-- Parenthesis ( ) define an event binding.  If we want to catch and do something with an event, do this -->
+    <button [disabled]="!allowNewServer" class="btn btn-primary my-1" (click)="onCreateServer()">
+        Add Server
+    </button>
 
-<p>{{ serverCreationStatus }}</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <p>{{ serverCreationStatus }}</p>
+</div>
 
 
 
@@ -51,5 +37,5 @@
 <!-- Use property binding if you want to change the properties of an element -->
 <!-- DON'T MIX THE TWO! -->
 
-<app-server></app-server>
-<app-server></app-server>
+<!-- <app-server></app-server>
+<app-server></app-server> -->
