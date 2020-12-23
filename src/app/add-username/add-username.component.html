@@ -1,0 +1,13 @@
+<div>
+    <label>Add your Username below</label>
+
+    <code class="d-block">Practicing data binding</code>
+
+    <!-- This is all that is needed to set up 2-way-binding.  Add an event binding to trigger... -->
+    <!-- ...a method that determines if the disables property should be on or off. -->
+    <input class="form-control" [(ngModel)]="username" (input)="isEmptyUsername()"> 
+    <!-- Property binding: This disabled property relies on the value of the usernameEmpty variable -->
+    <button class="btn btn-success mt-1" [disabled]="usernameEmpty" (click)="resetUsername();">Create Username</button>
+
+    <p>Your Username so far: {{ username }}</p>
+</div>
