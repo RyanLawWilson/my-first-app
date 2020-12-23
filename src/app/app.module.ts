@@ -9,6 +9,7 @@ import { ServerComponent } from './server/server.component'; // TypeScript needs
 import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warningAlert/warningAlert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component'
+import { AddUsernameComponent } from './add-username/add-username.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component'
     ServerComponent, // In Angular, new components are declared here 
     ServersComponent,
     WarningAlertComponent,
-    SuccessAlertComponent
+    SuccessAlertComponent,
+    AddUsernameComponent
   ],
   imports: [
     BrowserModule,
