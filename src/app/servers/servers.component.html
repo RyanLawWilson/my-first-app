@@ -1,3 +1,8 @@
-<button class="btn btn-primary">Add Server</button>
+<!-- By property binding by using [ ], we are setting the disabled property natively... -->
+<!-- ...which is something that the regular disabled HTML attribute doesn't do. -->
+<!-- Since the disabled property uses a bool, we set true or false based on the variable we declard in the TS. -->
+<button [disabled]="!allowNewServer" class="btn btn-primary">
+    Add Server
+</button>
 <app-server></app-server>
 <app-server></app-server>
