@@ -24,7 +24,7 @@ export class ServersComponent implements OnInit {
 
   // Changes the text below the Add Server button when it's clicked
   onCreateServer() {
-    this.serverCreationStatus = "Server was created!";
+    this.serverCreationStatus = "Server was created! Name is " + this.serverName;
   }
 
   // When anything is typed into the input element, show the typed text in a p tag.

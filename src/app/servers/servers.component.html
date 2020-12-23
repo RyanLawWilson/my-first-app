@@ -15,13 +15,13 @@
     class="form-control"
     [(ngModel)]="serverName">
 
-<p class="my-3">{{ serverName }}&nbsp;</p>
+<!-- <p class="my-3">{{ serverName }}&nbsp;</p> -->
 
 <!-- By property binding by using [ ], we are setting the disabled property natively... -->
 <!-- ...which is something that the regular disabled HTML attribute doesn't do. -->
 <!-- Since the disabled property uses a bool, we set true or false based on the variable we declared in the TS. -->
 <!-- Parenthesis ( ) define an event binding.  If we want to catch and do something with an event, do this -->
-<button [disabled]="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">
+<button [disabled]="!allowNewServer" class="btn btn-primary my-1" (click)="onCreateServer()">
     Add Server
 </button>
 
