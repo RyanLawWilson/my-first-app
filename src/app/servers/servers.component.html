@@ -4,5 +4,14 @@
 <button [disabled]="!allowNewServer" class="btn btn-primary">
     Add Server
 </button>
+
+<!-- Sometimes you can use either string interpolation or property binding -->
+<p>{{ allowNewServer }}</p>
+<p [innerText]="allowNewServer"></p>
+
+<!-- Use string interpolation if you want to print out string values -->
+<!-- Use property binding if you want to change the properties of an element -->
+<!-- DON'T MIX THE TWO! -->
+
 <app-server></app-server>
 <app-server></app-server>
