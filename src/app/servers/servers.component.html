@@ -1,13 +1,42 @@
+<label>Server Name</label>
+
+<!-- Some events give you data when they are fired.  This data can be captured by passing $event as an argument -->
+<input
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)">
+
+<p class="my-3">{{ serverName }}&nbsp;</p>
+
 <!-- By property binding by using [ ], we are setting the disabled property natively... -->
 <!-- ...which is something that the regular disabled HTML attribute doesn't do. -->
-<!-- Since the disabled property uses a bool, we set true or false based on the variable we declard in the TS. -->
-<button [disabled]="!allowNewServer" class="btn btn-primary">
+<!-- Since the disabled property uses a bool, we set true or false based on the variable we declared in the TS. -->
+<!-- Parenthesis ( ) define an event binding.  If we want to catch and do something with an event, do this -->
+<button [disabled]="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">
     Add Server
 </button>
 
+<p>{{ serverCreationStatus }}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Sometimes you can use either string interpolation or property binding -->
-<p>{{ allowNewServer }}</p>
-<p [innerText]="allowNewServer"></p>
+<!-- <p>{{ allowNewServer }}</p>
+<p [innerText]="allowNewServer"></p> -->
 
 <!-- Use string interpolation if you want to print out string values -->
 <!-- Use property binding if you want to change the properties of an element -->
