@@ -27,7 +27,9 @@
 
     <!-- Directors use typically use the attribute selector -->
     <!-- ngIf is a structural directive, it changes the DOM itself -->
-    <p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
+    <p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>
+    <!-- # is a local reference.  Need to use ng-template is you want to use references -->
+    <ng-template #noServer><p>No server was created!</p></ng-template>
 </div>
 
 
