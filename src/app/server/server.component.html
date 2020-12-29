@@ -1,5 +1,5 @@
-<div style="border: 2px solid yellowgreen; padding: 10px">
-    <!-- Anything inside of the {{}} must be a string or easily converted to a string -->
-    <!-- The {{}} syntax is called string interpolation, you can use variables and methods inside -->
-    <h1>{{ 'Server' }} with Id {{ serverId }} is {{ getServerStatus() }}</h1>
-</div>
+<!-- Anything inside of the {{}} must be a string or easily converted to a string -->
+<!-- The {{}} syntax is called string interpolation, you can use variables and methods inside -->
+
+<!-- Use a property binding on ngStyle to allow you to dynamically change the CSS styles -->
+<h5 [ngStyle]="{'background-color': getColor()}">{{ 'Server' }} with Id {{ serverId }} is {{ getServerStatus() }}</h5>

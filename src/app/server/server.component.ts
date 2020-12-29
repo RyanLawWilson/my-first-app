@@ -10,7 +10,15 @@ export class ServerComponent {  // export means that we want to use this class o
     serverId: number = 10;              // Do name: type in TypeScript to specify the type of a variable
     serverStatus: string = 'Offline';
 
+    constructor() {
+        this.serverStatus = Math.random() > 0.5 ? "online" : "offline";
+    }
+
     getServerStatus() {
         return this.serverStatus;
+    }
+
+    getColor() {
+        return this.serverStatus === 'online' ? 'green' : 'red';
     }
 }
