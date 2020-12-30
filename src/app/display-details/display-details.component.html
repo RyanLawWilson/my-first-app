@@ -8,7 +8,14 @@
     </div>
 
     <div class="card-deck justify-content-center">
-        <div class="card" *ngFor="let n of buttonClicks" [ngClass]="{greaterThan4: n.id >= 5}" [ngStyle]="{'background-color': n.id >= 5 ? 'rgba(0, 0, 255, 0.3)' : 'inherit'}">
+
+        <!-- You can access the index of ngFor by using let i = index -->
+        <div 
+            class="card" 
+            *ngFor="let n of buttonClicks; let i = index" 
+            [ngClass]="{greaterThan4: n.id >= 5}" 
+            [ngStyle]="{'background-color': n.id >= 5 ? 'rgba(0, 0, 255, 0.3)' : 'inherit'}">
+
             <p class="m-0">
                 Button was clicked at:<br>
                 {{ n.clicked }}<br>
