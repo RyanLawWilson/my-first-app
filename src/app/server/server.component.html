@@ -2,4 +2,8 @@
 <!-- The {{}} syntax is called string interpolation, you can use variables and methods inside -->
 
 <!-- Use a property binding on ngStyle to allow you to dynamically change the CSS styles -->
-<h5 [ngStyle]="{'background-color': getColor()}">{{ 'Server' }} with Id {{ serverId }} is {{ getServerStatus() }}</h5>
+<!-- ngClass only works as a property binding (wrap with []) -->
+<!-- The value of ngClass is a JavaScript object where the keys represent the class names 
+    and the values represent the condition to determine if the class should appear or not -->
+<h5 [ngStyle]="{'background-color': getColor()}"
+    [ngClass]="{'online': serverStatus === 'online'}">{{ 'Server' }} with Id {{ serverId }} is {{ getServerStatus() }}</h5>

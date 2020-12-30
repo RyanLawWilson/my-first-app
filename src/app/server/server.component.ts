@@ -4,7 +4,13 @@ import { Component } from '@angular/core';   // Need to import Component for it 
 // Similar to Data annotations in C# .NET Framework
 @Component({
     selector: 'app-server',  // Defines the HTML tag name that will be used to represent this component
-    templateUrl: './server.component.html' // Points to the template page (HTML page of the component)
+    templateUrl: './server.component.html', // Points to the template page (HTML page of the component)
+    styles: [`
+        .online {
+            color: white;
+            font-weight: bolder;
+        }    
+    `]
 })
 export class ServerComponent {  // export means that we want to use this class outside of this file
     serverId: number = 10;              // Do name: type in TypeScript to specify the type of a variable
