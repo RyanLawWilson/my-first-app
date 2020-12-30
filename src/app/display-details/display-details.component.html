@@ -1,0 +1,19 @@
+<div class="main-container">
+    <h4>Display Paragraph Details and log button clicks</h4>
+    <hr>
+
+    <div class='btn-container'>
+        <button class="btn btn-primary" (click)="toggleParagraph()">Display Details</button>
+        <p [ngStyle]="{display: displayStatus}">Word of the day: "Pizza"</p>
+    </div>
+
+    <div class="card-deck justify-content-center">
+        <div class="card" *ngFor="let n of buttonClicks" [ngClass]="{greaterThan4: n.id >= 5}" [ngStyle]="{'background-color': n.id >= 5 ? 'rgba(0, 0, 255, 0.3)' : 'inherit'}">
+            <p class="m-0">
+                Button was clicked at:<br>
+                {{ n.clicked }}<br>
+                # of btn clicks: {{ n.id }}
+            </p>
+        </div>
+    </div>
+</div>
