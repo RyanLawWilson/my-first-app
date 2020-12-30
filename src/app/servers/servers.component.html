@@ -32,8 +32,8 @@
     <!-- <ng-template #noServer><p>No server was created!</p></ng-template> -->
 
     <!-- Attribute directives don't add or remove from the DOM, they alter what's already there. -->
-    <app-server></app-server>
-    <app-server></app-server>
+    <!-- Use *ngFor, another structural directive, to display a list of elements.  The value is set up like a C# foreach loop -->
+    <app-server *ngFor="let server of servers"></app-server>
 </div>
 
 
